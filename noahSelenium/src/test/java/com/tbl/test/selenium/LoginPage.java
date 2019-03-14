@@ -36,7 +36,9 @@ public class LoginPage {
      * @param passWord
      */
     public void login(String userName, String passWord) {
+    	username.clear();
         username.sendKeys(userName);
+        password.clear();
         password.sendKeys(passWord);
         loginBtn.click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
