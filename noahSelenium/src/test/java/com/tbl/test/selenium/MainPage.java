@@ -118,15 +118,10 @@ public class MainPage {
     
     // 添加角色
     public static int addRole(String roleName) throws Exception {
-    	// 判断是否能进入登录页
-    	if (ifLoginPage()) {
-	    	rolePage();
-	        RolePage rolePage = new RolePage(driver);
-	        return rolePage.addRole(roleName);
-    	} else {
-    		return -1;
-    	}
-		    	
+//    	rolePage();
+        RolePage rolePage = new RolePage(driver);
+        return rolePage.addRole(roleName);
+			    	
     }
     
 }

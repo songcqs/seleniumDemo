@@ -51,12 +51,12 @@ public class LoginTest {
         System.out.println("------Case1.开始测试登录成功...");
         // 使用账号密码进行登录
         int retCode = MainPage.login("noah", "123456");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case1测试成功！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
         		print("Case1测试失败！");
         	
         	// 返回-1时
@@ -77,12 +77,12 @@ public class LoginTest {
         System.out.println("------Case2.开始测试密码错误，登录失败...");
         // 使用账号密码进行登录
         int retCode = MainPage.login("admin", "hqks-admi");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case2测试失败！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
                 print("Case2测试成功！");
         	} else {
         		print("未能进入登录页，Case2测试失败！");
@@ -98,12 +98,12 @@ public class LoginTest {
     	System.out.println("------Case3.开始测试不输入密码，登录失败..");
         // 使用账号密码进行登录
         int retCode = MainPage.login("admin", "");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case3测试失败！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
                 print("Case3测试成功！");
         	} else {
         		print("未能进入登录页，Case3测试失败！");
@@ -118,12 +118,12 @@ public class LoginTest {
     	System.out.println("------Case4.开始测试用户名错误，登录失败..");
         // 使用账号密码进行登录
         int retCode = MainPage.login("admin1", "sonriku");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case4测试失败！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
                 print("Case4测试成功！");
         	} else {
         		print("未能进入登录页，Case4测试失败！");
@@ -138,12 +138,12 @@ public class LoginTest {
     	System.out.println("------Case5.开始测试用户名为空，登录失败..");
         // 使用账号密码进行登录
         int retCode = MainPage.login("", "sonriku");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case5测试失败！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
                 print("Case5测试成功！");
         	} else {
         		print("未能进入登录页，Case5测试失败！");
@@ -158,12 +158,12 @@ public class LoginTest {
     	System.out.println("------Case6.开始测试用户名密码为空，登录失败..");
         // 使用账号密码进行登录
         int retCode = MainPage.login("", "");
-        if (retCode == 1) {
+        if (retCode == 0) {
             print("Case6测试失败！");
             // 注销
             MainPage.logout();
         } else {
-        	if (retCode == 0) {
+        	if (retCode == 1) {
                 print("Case6测试成功！");
         	} else {
         		print("未能进入登录页，Case6测试失败！");

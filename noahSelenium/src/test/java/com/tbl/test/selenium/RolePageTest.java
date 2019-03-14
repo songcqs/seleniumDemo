@@ -47,11 +47,16 @@ public class RolePageTest {
         System.out.println("------Case1.开始测试添加角色...");
         // 使用账号密码进行登录
         if (MainPage.login("noah", "123456") == 0) {
+        	MainPage.rolePage();
 	        int retCode = MainPage.addRole("测试角色E");
 	        if (retCode == 0) {
 	            print("Case1测试成功！");
+	            // 注销
+//	            MainPage.logout();
 	        } else if (retCode == 1) {
         		print("Case1测试失败");
+                // 注销
+                MainPage.logout();
         	} else if (retCode == -1) {
                 print("未知错误，Case1测试失败！");
                 //如果添加失败，则终止程序 (预期的应该是能登录的，如果第一条case失败，则直接退出)
@@ -74,19 +79,20 @@ public class RolePageTest {
 
         System.out.println("------Case2.开始测试添加重复名称的角色...");
         // 使用账号密码进行登录
-        if (MainPage.login("noah", "123456") == 0) {
+//        if (MainPage.login("noah", "123456") == 0) {
+        MainPage.rolePage();
 	        int retCode = MainPage.addRole("测试角色E");
 	        if (retCode == 0) {
 	            print("Case2测试失败！");//不允许添加重复名称的角色
 	        } else if (retCode == 1) {
-	        		print("Case2测试成功");
+        		print("Case2测试成功！");
         	} else if (retCode == -1) {
                 print("未知错误，Case2测试失败！");
         	}
 	        
-        } else {
-        	print("未能进入登录页，Case2测试失败！");
-        }
+//        } else {
+//        	print("未能进入登录页，Case2测试失败！");
+//        }
         Thread.sleep(2000);
     }
 

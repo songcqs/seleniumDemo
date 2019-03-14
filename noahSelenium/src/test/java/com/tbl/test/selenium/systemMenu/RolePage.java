@@ -44,7 +44,8 @@ public class RolePage {
      *          -1：未知异常
      * @throws Exception
      */
-    public int addRole( String roleName) throws Exception{
+    @SuppressWarnings("null")
+	public int addRole( String roleName) throws Exception{
         // 点击添加
         addBtn.click();
         // 返回主内容
@@ -90,32 +91,58 @@ public class RolePage {
                 WebElement roleAddDelCheckbox = driver.findElement(By.xpath(ROLE_ADD_CKBX_DEL_XP));
                 roleAddDelCheckbox.click();
 
+//                List<String> idList = null;
+//                idList.add(ROLE_SYS_MNG_ID);
+//                idList.add(ROLE_DEV_MNG_ID);
+//                idList.add(ROLE_VIS_OPS_ID);
+//                idList.add(ROLE_DATA_REPO_ID);
+//                idList.add(ROLE_EXPA_BUSI_ID);
+//                idList.add(ROLE_DATA_BAK_ID);
+//                idList.add(ROLE_MESH_PREV_ID);
+//                idList.add(ROLE_RUL_ENG_ID);
+//                idList.add(ROLE_SYS_TOOL_ID);
+//                idList.add(ROLE_SYS_LOG_ANAL_ID);
+//                
+//                for (String id : idList) {
+//                	driver.findElement(By.id(id)).click();
+//                }
                 // 定义 添加角色弹框--菜单元素列表
-                List<WebElement> eleLists = null;
+//                List<WebElement> eleLists = null;
                 // 添加角色弹框--系统管理勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_SYS_MNG_ID)));
+                driver.findElement(By.id(ROLE_SYS_MNG_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_SYS_MNG_ID)));
+                
                 // 添加角色弹框--设备管理勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_DEV_MNG_ID)));
+                driver.findElement(By.id(ROLE_DEV_MNG_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_DEV_MNG_ID)));
                 // 添加角色弹框--可视化运维勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_VIS_OPS_ID)));
+                driver.findElement(By.id(ROLE_VIS_OPS_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_VIS_OPS_ID)));
                 // 添加角色弹框--数据报表勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_DATA_REPO_ID)));
+                driver.findElement(By.id(ROLE_DATA_REPO_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_DATA_REPO_ID)));
                 // 添加角色弹框--扩展业务勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_EXPA_BUSI_ID)));
+                driver.findElement(By.id(ROLE_EXPA_BUSI_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_EXPA_BUSI_ID)));
                 // 添加角色弹框--数据备份勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_DATA_BAK_ID)));
+                driver.findElement(By.id(ROLE_DATA_BAK_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_DATA_BAK_ID)));
                 // 添加角色弹框--MESH预览勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_MESH_PREV_ID)));
+                driver.findElement(By.id(ROLE_MESH_PREV_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_MESH_PREV_ID)));
                 // 添加角色弹框--规则引擎勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_RUL_ENG_ID)));
+                driver.findElement(By.id(ROLE_RUL_ENG_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_RUL_ENG_ID)));
                 // 添加角色弹框--系统工具勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_SYS_TOOL_ID)));
+                driver.findElement(By.id(ROLE_SYS_TOOL_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_SYS_TOOL_ID)));
                 // 添加角色弹框--系统日志分析勾选框id
-                eleLists.add(driver.findElement(By.id(ROLE_SYS_LOG_ANAL_ID)));
+//                driver.findElement(By.id(ROLE_SYS_LOG_ANAL_ID)).click();
+//                eleLists.add(driver.findElement(By.id(ROLE_SYS_LOG_ANAL_ID)));
                 // 遍历勾选菜单checkbox
-                for ( WebElement element : eleLists ) {
-                    element.click();
-                }
+//                for ( WebElement element : eleLists ) {
+//                    element.click();
+//                }
 
                 // 添加角色弹框--提交xp
                 roleAddSubmit = driver.findElement(By.xpath(ROLE_ADD_SBMT_XP));
