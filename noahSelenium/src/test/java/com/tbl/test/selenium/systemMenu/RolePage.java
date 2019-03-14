@@ -131,7 +131,10 @@ public class RolePage {
                 driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             }
         }
-
+        
+        // TODO 缺少添加角色后的验证
+        // 尝试使用页面列表角色名称的text是否存在角色名称来验证
+        
         return 0;
     }
 }
